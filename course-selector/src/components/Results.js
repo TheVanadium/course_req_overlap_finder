@@ -1,9 +1,14 @@
 import React from 'react';
+import './Results.css';
 
-function Results() {
+function Results(props) {
     return (
       <div id="results">
-        <p>Results Works!</p>
+        <h2>Results Works!</h2>
+        {/* create p tag for each poprs.courses */}
+        {props.courses.map((course) => (
+          <p>{course}</p>
+        ))}
       </div>
     );
   }
