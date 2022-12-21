@@ -5,21 +5,25 @@ import React, { useState, useEffect } from 'react';
 
 function App() {
 
-  const [courses, setCourses] = useState([]);
+  const [courses, setCourses] = useState(["Data not Found"]);
+
+  function filterUpdate() {
+    console.log("filter update");
+  }
 
   useEffect(() => {
-    fetch('/sustainability').then(
+    fetch('/sustainability,ethics').then(
       res => res.json()
     ).then(data => {
-        setCourses(data.courses);
-        console.log(data.courses);
+        console.log(data);
+        setCourses(data);
       }
     )
   }, [])
 
   return (
     <div className='container'>
-      <Filters></Filters>
+      <Filters onChange={filterUpdate()}></Filters>
       <Results courses={courses}></Results>
     </div>
   );

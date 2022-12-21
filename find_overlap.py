@@ -9,9 +9,7 @@ def findCourseOverlap(badgeArray):
 
     overlap = sorted(overlap)
 
-    # print the overlap
-    for course in overlap:
-        print(course)
+    return overlap
 
 if __name__ == "__main__":
-    findCourseOverlap(["sustainability", "global-awareness", "ethics"])
+    print(findCourseOverlap(["sustainability"]))
