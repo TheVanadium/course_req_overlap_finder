@@ -9,7 +9,7 @@ app = Flask(__name__)
 #api that gets courses for a list of badges
 @app.route('/<badges>')
 def get_courses(badges):
-    badges = badges.split(',')
+    badges = badges.split('_')
     return findCourseOverlap([badge for badge in badges])
 
 

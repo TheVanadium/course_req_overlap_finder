@@ -12,7 +12,7 @@ function App() {
   }
 
   useEffect(() => {
-    fetch('/sustainability,ethics').then(
+    fetch('/sustainability_ethics').then(
       res => res.json()
     ).then(data => {
         console.log(data);
