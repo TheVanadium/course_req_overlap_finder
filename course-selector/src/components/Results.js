@@ -6,9 +6,9 @@ function Results(props) {
       <div id="results">
         <h2>Results Works!</h2>
         {/* create p tag for each poprs.courses */}
-        {props.courses.map((course) => (
-          <p>{course}</p>
-        ))}
+        <div id="courseResultsList">
+          {props.courses.map((course) => <p>{course}</p>)}
+        </div>
       </div>
     );
   }
