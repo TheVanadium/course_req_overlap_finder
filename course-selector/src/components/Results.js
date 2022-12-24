@@ -7,7 +7,7 @@ function Results(props) {
         <h2>Results Works!</h2>
         {/* create p tag for each poprs.courses */}
         <div id="courseResultsList">
-          {props.courses.map((course) => <p>{course}</p>)}
+          {props.courses.map((course) => <p key={course}>{course}</p>)}
         </div>
       </div>
     );
