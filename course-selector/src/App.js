@@ -22,7 +22,7 @@ function App() {
     )
   }
 
-  const filterUpdate = (badge) => () => {
+  const updateFilter = (badge) => () => {
     console.log("Filter Update");
     if (badge in badgeFilters) {
       setBadgeFilters(badgeFilters.filter(badge));
@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div className='container'>
-      <Filters onChange={filterUpdate("sustainability")}></Filters>
+      <Filters onChange={updateFilter("sustainability")}></Filters>
       <Results courses={courses}></Results>
     </div>
   );
