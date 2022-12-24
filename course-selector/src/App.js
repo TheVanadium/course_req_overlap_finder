@@ -6,12 +6,13 @@ import React, { useState, useEffect } from 'react';
 function App() {
 
   const [courses, setCourses] = useState(["Data not Found"]);
-
-  function filterUpdate() {
-    console.log("filter update");
-  }
+  const [badgeFilters, setBadgeFilters] = useState([])
 
   useEffect(() => {
+    loadCourses();
+  }, [])
+
+  function loadCourses() {
     fetch('/sustainability_ethics').then(
       res => res.json()
     ).then(data => {
@@ -19,11 +20,20 @@ function App() {
         setCourses(data);
       }
     )
-  }, [])
+  }
+
+  const filterUpdate = (badge) => () => {
+    console.log("Filter Update");
+    if (badge in badgeFilters) {
+      setBadgeFilters(badgeFilters.filter(badge));
+    } else {
+      setBadgeFilters(badgeFilters.push(badge));
+    }
+  }
 
   return (
     <div className='container'>
-      <Filters onChange={filterUpdate()}></Filters>
+      <Filters onChange={filterUpdate("sustainability")}></Filters>
       <Results courses={courses}></Results>
     </div>
   );
