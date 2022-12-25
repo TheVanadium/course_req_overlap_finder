@@ -1,19 +1,29 @@
 import React from 'react';
 
 function ChecklistFilter(props) {
-  
+
+  // function that returns checklist item html
+  function checklistItem(item) {
+    // create a url friendly version of the item
+    const urlItem = item.toLowerCase().replace(/ /g, "-");
+
     return (
-      <div id="filters">
-        <p>Badges</p>
-        {/* checklist items for each props.checklist-items if it exists*/}
-          { props.checklistItems && props.checklistItems.map((item) => (
-            <div key={item} id={item}>
-              <input key={item + "input"} type="checkbox" id={item} name={item} value={item} onChange={(event)=>{props.onChange(event.target.value)}}/>
-              <label key={item + "label"} htmlFor={item}>{item}</label>
-            </div>
-          ))}
+      <div key={urlItem} id={item}>
+        <input key={urlItem + "input"} type="checkbox" id={item} name={item} value={urlItem} onChange={(event)=>{props.update(event.target.value)}}/>
+        <label key={urlItem + "label"} htmlFor={item}>{item}</label>
       </div>
     );
   }
+
+
+  return (
+    <div id="filters">
+      <p>Badges</p>
+        { props.checklistItems && props.checklistItems.map((item) => {
+          return (checklistItem(item))
+        })}
+    </div>
+  );
+}
 export default ChecklistFilter;
 
