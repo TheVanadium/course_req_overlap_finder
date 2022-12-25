@@ -1,15 +1,19 @@
 #flask app
 import os
-from flask import Flask
+from flask import Flask, request
 from find_overlap import findCourseOverlap
 
 
 app = Flask(__name__)
 
-#api that gets courses for a list of badges
-@app.route('/<badges>')
-def get_courses(badges):
-    badges = badges.split('_')
+# badges is the only query string allowed
+@app.route('/courses')
+
+def get_courses():
+    # get badges from query string
+    badges = request.args.get('badges')
+    badges = badges.split(',')
+
     return findCourseOverlap([badge for badge in badges])
 
 
