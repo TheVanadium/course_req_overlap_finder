@@ -17,25 +17,26 @@ function App() {
   }, [badgeFilters])
 
   function loadCourses() {
-    // turn badgeFilters into a query string
+    // if the course list is empty, then load message "Please select a badge"
+    if (badgeFilters.length === 0) {
+      setCourses(["Please select a badge"]);
+      return;
+    }
+
     fetch('/courses?badges=' + badgeFilters.join(',')).then(
       res => res.json()
     ).then(data => {
-        console.log(data);
         setCourses(data);
       }
     )
   }
 
-  function updateFilter (badge) {
-    console.log("Filter Update");
-    console.log(badgeFilters)
-    if (badge in badgeFilters) {
-      setBadgeFilters(badgeFilters.filter(badge));
+  function updateFilter(badge) {
+    if (badgeFilters.includes(badge)) {
+      setBadgeFilters(badgeFilters.filter(item => item !== badge));
     } else {
       setBadgeFilters(badgeFilters.concat(badge));
     }
-    console.log(badge + " was added");
   }
 
   return (
