@@ -6,13 +6,11 @@ import './Filters.css';
 // then change the onChange function to change the value of the key to the opposite of what it was before
 
 const badgeList = [
-  "Scientific Method", 
-  "Literary and Textual Analysis", 
-  "Media and Visual Analysis", 
-  "Quantitative and Numerical Analysis", 
-  "Pratical and Applied Knowledge", 
   "Ethics",
   "Global Awareness",
+  "Literary and Textual Analysis", 
+  "Media and Visual Analysis", 
+  "Scientific Method", 
   "Sustainability",
 ];
 
