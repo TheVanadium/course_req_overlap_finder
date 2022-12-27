@@ -11,8 +11,10 @@ def getUCMercedCourses(badgeUrl):
     # course list items are in h2 Courses's next sibling div
     courseListItems = soup.find("h2", text="Courses").find_next_sibling("div").find_all("li")
 
+    # get the text of each course and remove the " Units: "... part
     courses = [course.text for course in courseListItems]
-    
+    courses = [course[:-9] for course in courses]
+
     return courses
 
 if __name__ == "__main__":
