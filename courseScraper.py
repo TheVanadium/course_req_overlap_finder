@@ -17,7 +17,8 @@ def getUCMercedCourses(badgeUrl):
     courses = [course[:-9] for course in courses]
 
     #in courses replace "SPAN 195: Upper Division Undergraduate Resear" with "SPAN 195: Upper Division Undergraduate Research"
-    courses[courses.index("SPAN 195: Upper Division Undergraduate Resear")] = "SPAN 195: Upper Division Undergraduate Research"
+    if ("SPAN 195: Upper Division Undergraduate Resear" in courses):
+        courses[courses.index("SPAN 195: Upper Division Undergraduate Resear")] = "SPAN 195: Upper Division Undergraduate Research"
 
     return courses
 
