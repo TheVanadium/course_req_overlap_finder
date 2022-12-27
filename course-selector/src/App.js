@@ -16,13 +16,16 @@ function App() {
     loadCourses();
   }, [badgeFilters])
 
+  /**
+   * Loads the courses from the server based on the badge filters.
+   * 
+   * @todo - Add loading indicator.
+   */
   function loadCourses() {
-    // if the course list is empty, then load message "Please select a badge"
     if (badgeFilters.length === 0) {
       setCourses(["Please select a badge"]);
       return;
     }
-
     fetch('/courses?badges=' + badgeFilters.join(',')).then(
       res => res.json()
     ).then(data => {
@@ -31,6 +34,10 @@ function App() {
     )
   }
 
+  /**
+   * Updates the badge filters based on the given badge.
+   * @param {string} badge - The badge to add or remove from the badge filters.
+   */
   function updateFilter(badge) {
     if (badgeFilters.includes(badge)) {
       setBadgeFilters(badgeFilters.filter(item => item !== badge));
