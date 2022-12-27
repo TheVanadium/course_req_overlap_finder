@@ -4,8 +4,7 @@ import './Results.css';
 function Results(props) {
     return (
       <div id="results">
-        <h2>Results Works!</h2>
-        {/* create p tag for each poprs.courses */}
+        <h2>Results</h2>
         <div id="courseResultsList">
           {props.courses.map((course) => <p key={course}>{course}</p>)}
         </div>
