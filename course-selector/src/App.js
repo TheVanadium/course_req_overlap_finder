@@ -23,7 +23,7 @@ function App() {
    */
   function loadCourses() {
     if (badgeFilters.length === 0) {
-      setCourses(["Please select a badge"]);
+      setCourses([]);
       return;
     }
     fetch('/courses?badges=' + badgeFilters.join(',')).then(
