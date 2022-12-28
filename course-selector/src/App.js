@@ -48,7 +48,7 @@ function App() {
 
   return (
     <div className='container'>
-      <Filters updateFilters={(value) => {updateFilter(value); console.log('meepers');}}></Filters>
+      <Filters updateFilters={(value) => {updateFilter(value);}}></Filters>
       <Results courses={courses}></Results>
     </div>
   );
