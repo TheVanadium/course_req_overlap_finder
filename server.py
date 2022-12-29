@@ -1,5 +1,3 @@
-#flask app
-import os
 from flask import Flask, request
 from find_overlap import findCourseOverlap
 
