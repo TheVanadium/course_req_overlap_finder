@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 
 function App() {
 
-  const [courses, setCourses] = useState(["Loading..."]);
+  const [courses, setCourses] = useState([]);
   const [badgeFilters, setBadgeFilters] = useState([])
 
   useEffect(() => {
