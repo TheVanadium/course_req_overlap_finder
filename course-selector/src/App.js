@@ -1,6 +1,7 @@
 import './App.css';
 import Filters from './components/Filters';
 import Results from './components/Results';
+import Header from './components/Header';
 import React, { useState, useEffect } from 'react';
 
 function App() {
@@ -51,9 +52,12 @@ function App() {
   }
 
   return (
-    <div className='container'>
-      <Filters updateFilters={(value) => {updateFilter(value);}}></Filters>
-      <Results courses={courses} loading={loading}></Results>
+    <div className="app-container">
+      <Header></Header>
+      <div className='search-tool'>
+        <Filters updateFilters={(value) => {updateFilter(value);}}></Filters>
+        <Results courses={courses} loading={loading}></Results>
+      </div>
     </div>
   );
 }

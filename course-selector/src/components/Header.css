@@ -1,0 +1,29 @@
+.navbar {
+    display: flex;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    height: 8%;
+    width: 100%;
+}
+
+.navbar-item {
+    padding: 1%;
+    font-size: 1.1em;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar-item * {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-item:hover a {
+    text-decoration: underline;
+}
+
+/* first child goes left, the rest go right */
+.navbar-item:first-child {
+    margin-right: auto;
+}
