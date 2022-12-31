@@ -14,7 +14,8 @@ function Results(props) {
       <div id="results">
         <h2>Results</h2>
         <div id="courseResultsList">
-          {generateCourses()}
+          {/* if props.loading is true, put loading <p></p> otherwise generate courses */}
+          {props.loading ? <p id={"loading"} className={"course"}>Loading...</p> : generateCourses()}
         </div>
       </div>
     );

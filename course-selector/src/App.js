@@ -7,6 +7,7 @@ function App() {
 
   const [courses, setCourses] = useState([]);
   const [badgeFilters, setBadgeFilters] = useState([])
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     loadCourses();
@@ -26,10 +27,13 @@ function App() {
       setCourses([]);
       return;
     }
+    // loading feature 
+    setLoading(true);
     fetch('/courses?badges=' + badgeFilters.join(',')).then(
       res => res.json()
     ).then(data => {
         setCourses(data);
+        setLoading(false);
       }
     )
   }
@@ -49,7 +53,7 @@ function App() {
   return (
     <div className='container'>
       <Filters updateFilters={(value) => {updateFilter(value);}}></Filters>
-      <Results courses={courses}></Results>
+      <Results courses={courses} loading={loading}></Results>
     </div>
   );
 }
