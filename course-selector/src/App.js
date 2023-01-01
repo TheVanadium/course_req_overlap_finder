@@ -20,8 +20,6 @@ function App() {
 
   /**
    * Loads the courses from the server based on the badge filters.
-   * 
-   * @todo - Add loading indicator.
    */
   function loadCourses() {
     if (badgeFilters.length === 0) {
