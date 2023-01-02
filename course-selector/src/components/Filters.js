@@ -5,7 +5,7 @@ import './Filters.css';
 /**
  * For more info go to https://ue.ucmerced.edu/academics
    This is a list of all the badges that are available, except:
-   -Leadership, Community, and Engaging the World (Units aren't listed, which messes up the API. Will need to be fixed.)
+   -Leadership, Community, and Engaging the World (Units are in div tags instead of li tags, which messes up the API.)
      https://ge.ucmerced.edu/intellectual-experience-badges/leadership-community-and-engaging-world
    -Practical and Applied Skills (No Page Available)
    -Quantitative and Numerical Analysis (No Page Available)
