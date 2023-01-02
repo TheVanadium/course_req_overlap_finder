@@ -10,7 +10,7 @@ function Header() {
           <p>UC Merced Badge Finder</p>
         </li>
         <li className="navbar-item">
-          <p><a href="#" className="navbar-link">GitHub</a></p>
+          <p><a href="https://github.com/TheVanadium/course_req_overlap_finder" className="navbar-link">GitHub</a></p>
         </li>
         <li className="navbar-item">
           <p><a href="https://thevanadium.github.io/portfolio/" className="navbar-link">by Garret Castro</a></p>
