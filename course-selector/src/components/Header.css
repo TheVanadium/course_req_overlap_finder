@@ -5,6 +5,7 @@
     padding: 0px;
     height: 8%;
     width: 100%;
+    background-color: var(--beginnings-light-grey);
 }
 
 .navbar-item {
