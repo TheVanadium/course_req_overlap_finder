@@ -12,10 +12,6 @@ function App() {
 
   useEffect(() => {
     loadCourses();
-  }, [])
-
-  useEffect(() => {
-    loadCourses();
   }, [badgeFilters])
 
   /**
