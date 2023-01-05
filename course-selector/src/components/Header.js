@@ -7,7 +7,7 @@ function Header() {
     <header>
       <ul className="navbar">
         <li className="navbar-item">
-          <p>UC Merced Badge Finder</p>
+          <p>Unofficial UC Merced Badge Finder</p>
         </li>
         <li className="navbar-item">
           <p><a href="https://github.com/TheVanadium/course_req_overlap_finder" className="navbar-link">GitHub</a></p>
