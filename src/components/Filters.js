@@ -18,6 +18,7 @@ const badgeList = [
   "Literary and Textual Analysis", 
   "Media and Visual Analysis", 
   "Scientific Method", 
+  "Societies and Cultures of the Past",
   "Sustainability",
 ];
 

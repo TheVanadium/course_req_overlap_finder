@@ -4,8 +4,9 @@ function ChecklistFilter(props) {
 
   // function that returns checklist item html
   function checklistItem(item) {
-    // create a url friendly version of the item
-    const urlItem = item.toLowerCase().replace(/ /g, "-");
+    let urlItem = item.toLowerCase().replace(/ /g, "-");
+    urlItem = urlItem.replace(/the-/g, "");
+    urlItem = urlItem.replace(/of-/g, "");
 
     return (
       <div key={urlItem} id={item}>
