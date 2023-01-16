@@ -11,8 +11,6 @@ function Results(props) {
     }
 
     function coursesLoading() {
-      // return <p id={"loading"} className={"course"}>Loading...</p>;
-      // 10 empty boxes
       return (
         <div id="loadingBoxList">
           <div className={"loadingBox"}><div className={"skeletonText"}></div><div className={"skeletonText"}></div></div>
@@ -33,8 +31,7 @@ function Results(props) {
       <div id="results">
         <h2>Results</h2>
         <div id="courseResultsList">
-          {/* if props.loading is true, put loading <p></p> otherwise generate courses */}
-          {/* todo: make proper loading component, column bubbles with shining thing*/}
+          {/* todo: add shimmer animation to coursesLoading*/}
           {props.loading ? coursesLoading() : generateCourses()}
         </div>
       </div>
