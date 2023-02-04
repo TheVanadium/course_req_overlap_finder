@@ -6,9 +6,9 @@ A website where users can select UC Merced badges and get a list of courses that
 Clone this repository and install node modules using `npm install`.
 
 ## Usage
-This website only works with the UC Merced Badge API (https://github.com/TheVanadium/uc_merced_badge_api), which is not publicly hosted yet. To run this file, you must clone both this repository and the UC Merced Badge API repository and run both at the same time.
+This project is hosted at the following URL: https://uc-merced-badge-finder.web.app/
 
-On the left-hand side there is a checklist of badges you can select or deselect. On the right-hand side is the list of courses that have all of the badges. Please always double-check GE fulfillments with the UC Merced catalog before registering for courses.
+This website displays a list of courses that contain badges selected by the user. On the left-hand side there is a checklist of badges you can select or deselect. On the right-hand side is the list of courses that have all of the badges. Please always double-check GE fulfillments with the UC Merced catalog before registering for courses.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first
