@@ -43,6 +43,12 @@
     text-align: center;
 }
 
+#courseResultsList #noCoursesFound {
+    font-size: 1.5em;
+    font-weight: 400;
+    text-align: center;
+}
+
 #loadingBoxList {
     display: flex;
     flex-direction: row;

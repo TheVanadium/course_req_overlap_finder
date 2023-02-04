@@ -5,9 +5,17 @@ function Results(props) {
 
     function generateCourses() {
       if (props.courses.length === 0) {
-        return <p id={"pleaseSelect"} className={"course"}>Please select a badge</p>;
+        return props.badgeFilters.length === 0 ? noBadgesSelected() : noCoursesFound();
       }
       return props.courses.map((course) => <p key={course} className={"course"}>{course}</p>);
+    }
+
+    function noCoursesFound() {
+      return <p id={"noCoursesFound"} className={"course"}>No courses found</p>;
+    }
+
+    function noBadgesSelected() {
+      return <p id={"pleaseSelect"} className={"course"}>Please select a badge</p>;
     }
 
     function coursesLoading() {

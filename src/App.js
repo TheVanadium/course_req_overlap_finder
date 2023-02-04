@@ -24,7 +24,7 @@ function App() {
     }
     // loading feature 
     setLoading(true);
-    fetch('/courses?badges=' + badgeFilters.join(',')).then(
+    fetch('https://thevanadium.pythonanywhere.com/courses?badges=' + badgeFilters.join(',')).then(
       res => res.json()
     ).then(data => {
         setCourses(data);
@@ -50,7 +50,7 @@ function App() {
       <Header></Header>
       <div className='search-tool'>
         <Filters updateFilters={(value) => {updateFilter(value);}}></Filters>
-        <Results courses={courses} loading={loading}></Results>
+        <Results courses={courses} loading={loading} badgeFilters={badgeFilters}></Results>
       </div>
     </div>
   );
