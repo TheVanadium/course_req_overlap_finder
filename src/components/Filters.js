@@ -12,8 +12,8 @@ import './Filters.css';
  */
 
 const badgeList = [
-  "Ethics",
   "Diversity and Identity",
+  "Ethics",
   "Global Awareness",
   "Literary and Textual Analysis", 
   "Media and Visual Analysis", 
