@@ -1,5 +1,7 @@
 import React from 'react';
 import ChecklistFilter from './ChecklistFilter.js';
+import UpdateDate from './UpdateDate.js';
+import Disclaimer from './Disclaimer.js';
 import './Filters.css';
 
 /**
@@ -30,6 +32,8 @@ function Filters(props) {
           props.updateFilters(value);
         }
         }></ChecklistFilter>
+        <UpdateDate></UpdateDate>
+        <Disclaimer></Disclaimer>
       </div>
     );
   }
