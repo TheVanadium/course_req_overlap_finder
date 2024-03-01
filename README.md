@@ -3,7 +3,7 @@
 A website where users can select UC Merced badges and get a list of courses that fulfill them.
 
 ## Installation
-Clone this repository and install node modules using `npm install`.
+Information about installation can be found in [docs/ONBOARDING.md](docs/ONBOARDING.md)
 
 ## Usage
 This project is hosted at the following URL: https://uc-merced-badge-finder.web.app/
