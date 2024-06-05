@@ -16,6 +16,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "format": "prettier --write \"src/**/*.{js,css}\"",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --ignore-pattern src/index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

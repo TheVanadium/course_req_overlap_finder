@@ -1,39 +1,39 @@
 /*UC Merced Color Template*/
 :root {
-    --bobcat-blue: #002856;
-    --bobcat-gold: #DAA900;
-    --sierra-sky-blue: #0091b3;
-    --golden-wheat: #ffbf3c;
-    --deep-sky-blue: #005487;
-    --half-dome-slate: #5b5b5b;
-    --beginnings-medium-grey: #e5e5e5;
-    --beginnings-light-grey: #efefef;
+  --bobcat-blue: #002856;
+  --bobcat-gold: #daa900;
+  --sierra-sky-blue: #0091b3;
+  --golden-wheat: #ffbf3c;
+  --deep-sky-blue: #005487;
+  --half-dome-slate: #5b5b5b;
+  --beginnings-medium-grey: #e5e5e5;
+  --beginnings-light-grey: #efefef;
 
-    --accent-green: #6ba43a;
-    --accent-orange: #f18a00;
-    --accent-blue: #99d9d9;
+  --accent-green: #6ba43a;
+  --accent-orange: #f18a00;
+  --accent-blue: #99d9d9;
 }
 
 .app-container {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .search-tool {
-    display: flex;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
 
 .search-tool > * {
-    border: 1px solid rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
 }
 
 #filters {
-    flex: 1;
+  flex: 1;
 }
 
 #results {
-    text-align: left;
-    flex: 4;
+  text-align: left;
+  flex: 4;
 }
