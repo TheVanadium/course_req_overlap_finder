@@ -8,7 +8,7 @@ function UpdateDate() {
     async function fetchDate() {
       try {
         const response = await fetch(
-          "https://thevanadium.pythonanywhere.com/update-date",
+          "https://thevanadium.pythonanywhere.com/update-date"
         );
         const data = await response.text();
         console.log(data);
@@ -32,7 +32,10 @@ function UpdateDate() {
 
   return (
     <div id="update-date">
-      <p>Last Updated: {dateStringToReadableDate(date)}</p>
+      <p>
+        Last Updated:{" "}
+        {date ? dateStringToReadableDate(date) : <i>Loading...</i>}
+      </p>
     </div>
   );
 }
