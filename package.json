@@ -16,6 +16,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "format": "prettier --write \"src/**/*.{js,css}\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

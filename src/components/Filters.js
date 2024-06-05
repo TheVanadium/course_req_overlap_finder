@@ -1,8 +1,8 @@
-import React from 'react';
-import ChecklistFilter from './ChecklistFilter.js';
-import UpdateDate from './UpdateDate.js';
-import Disclaimer from './Disclaimer.js';
-import './Filters.css';
+import React from "react";
+import ChecklistFilter from "./ChecklistFilter.js";
+import UpdateDate from "./UpdateDate.js";
+import Disclaimer from "./Disclaimer.js";
+import "./Filters.css";
 
 /**
  * For more info go to https://ue.ucmerced.edu/academics
@@ -17,25 +17,26 @@ const badgeList = [
   "Diversity and Identity",
   "Ethics",
   "Global Awareness",
-  "Literary and Textual Analysis", 
-  "Media and Visual Analysis", 
-  "Scientific Method", 
+  "Literary and Textual Analysis",
+  "Media and Visual Analysis",
+  "Scientific Method",
   "Societies and Cultures of the Past",
   "Sustainability",
 ];
 
 function Filters(props) {
-    return (
-      <div id="filters">
-        <h2>Filters</h2>
-        <ChecklistFilter checklistItems={(badgeList)} update={(value)=>{
+  return (
+    <div id="filters">
+      <h2>Filters</h2>
+      <ChecklistFilter
+        checklistItems={badgeList}
+        update={(value) => {
           props.updateFilters(value);
-        }
-        }></ChecklistFilter>
-        <UpdateDate></UpdateDate>
-        <Disclaimer></Disclaimer>
-      </div>
-    );
-  }
+        }}
+      ></ChecklistFilter>
+      <UpdateDate></UpdateDate>
+      <Disclaimer></Disclaimer>
+    </div>
+  );
+}
 export default Filters;
-

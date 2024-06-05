@@ -1,7 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -18,14 +18,12 @@ const firebaseConfig = {
   storageBucket: "uc-merced-badge-finder.appspot.com",
   messagingSenderId: "565744672969",
   appId: "1:565744672969:web:8b900ee930bc5368096d18",
-  measurementId: "G-H37RHEKGWY"
+  measurementId: "G-H37RHEKGWY",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <App />
-);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
