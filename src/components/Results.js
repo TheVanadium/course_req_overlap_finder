@@ -32,50 +32,14 @@ function Results(props) {
   }
 
   function coursesLoading() {
-    // return <p id={"loading"} className={"course"}>Loading...</p>;
-    // 10 empty boxes
     return (
       <div id="loadingBoxList">
-        <div className={"loadingBox"}>
-          <div className={"skeletonText"}></div>
-          <div className={"skeletonText"}></div>
-        </div>
-        <div className={"loadingBox"}>
-          <div className={"skeletonText"}></div>
-          <div className={"skeletonText"}></div>
-        </div>
-        <div className={"loadingBox"}>
-          <div className={"skeletonText"}></div>
-          <div className={"skeletonText"}></div>
-        </div>
-        <div className={"loadingBox"}>
-          <div className={"skeletonText"}></div>
-          <div className={"skeletonText"}></div>
-        </div>
-        <div className={"loadingBox"}>
-          <div className={"skeletonText"}></div>
-          <div className={"skeletonText"}></div>
-        </div>
-        <div className={"loadingBox"}>
-          <div className={"skeletonText"}></div>
-          <div className={"skeletonText"}></div>
-        </div>
-        <div className={"loadingBox"}>
-          <div className={"skeletonText"}></div>
-          <div className={"skeletonText"}></div>
-        </div>
-        <div className={"loadingBox"}>
-          <div className={"skeletonText"}></div>
-          <div className={"skeletonText"}></div>
-        </div>
-        <div className={"loadingBox"}>
-          <div className={"skeletonText"}></div>
-          <div className={"skeletonText"}></div>
-        </div>
-        <div className={"loadingBox"}>
-          <div className={"skeletonText"}></div>
-          <div className={"skeletonText"}></div>
-        </div>
+        {Array.from({ length: 10 }, (_, i) => (
+          <div className={"loadingBox"}>
+            <div className={"skeletonText"}></div>
+            <div className={"skeletonText"}></div>
+          </div>
+        ))}
       </div>
     );
   }
