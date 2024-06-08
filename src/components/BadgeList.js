@@ -1,6 +1,6 @@
 import React from "react";
 
-function ChecklistFilter(props) {
+function BadgeList(props) {
   function checklistItem(item) {
     let urlItem = item
       .toLowerCase()
@@ -36,4 +36,4 @@ function ChecklistFilter(props) {
     </div>
   );
 }
-export default ChecklistFilter;
+export default BadgeList;

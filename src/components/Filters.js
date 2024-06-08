@@ -1,5 +1,5 @@
 import React from "react";
-import ChecklistFilter from "./ChecklistFilter.js";
+import BadgeList from "./BadgeList.js";
 import UpdateDate from "./UpdateDate.js";
 import "./Filters.css";
 
@@ -27,12 +27,12 @@ function Filters(props) {
   return (
     <div id="filters">
       <h2>Filters</h2>
-      <ChecklistFilter
+      <BadgeList
         checklistItems={badgeList}
         update={(value) => {
           props.updateFilters(value);
         }}
-      ></ChecklistFilter>
+      ></BadgeList>
       <UpdateDate></UpdateDate>
       <div id="disclaimer">
         <p>
