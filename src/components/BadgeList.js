@@ -1,6 +1,12 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function BadgeList(props) {
+  BadgeList.propTypes = {
+    checklistItems: PropTypes.array,
+    update: PropTypes.func,
+  };
+
   function checklistItem(item) {
     let urlItem = item
       .toLowerCase()

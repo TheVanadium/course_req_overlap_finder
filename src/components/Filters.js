@@ -1,6 +1,7 @@
 import React from "react";
 import BadgeList from "./BadgeList.js";
 import UpdateDate from "./UpdateDate.js";
+import PropTypes from "prop-types";
 import "./Filters.css";
 
 /**
@@ -24,6 +25,10 @@ const badgeList = [
 ];
 
 function Filters(props) {
+  Filters.propTypes = {
+    updateFilters: PropTypes.func,
+  };
+
   return (
     <div id="filters">
       <h2>Filters</h2>
