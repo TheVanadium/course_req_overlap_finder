@@ -4,31 +4,21 @@ import "./Results.css";
 function Results(props) {
   function generateCourses() {
     if (props.courses.length === 0) {
-      return props.badgeFilters.length === 0
-        ? noBadgesSelected()
-        : noCoursesFound();
+      return props.badgeFilters.length === 0 ? (
+        <p id={"pleaseSelect"} className={"course"}>
+          Please select a badge
+        </p>
+      ) : (
+        <p id={"noCoursesFound"} className={"course"}>
+          No courses found
+        </p>
+      );
     }
     return props.courses.map((course) => (
       <p key={course} className={"course"}>
         {course}
       </p>
     ));
-  }
-
-  function noCoursesFound() {
-    return (
-      <p id={"noCoursesFound"} className={"course"}>
-        No courses found
-      </p>
-    );
-  }
-
-  function noBadgesSelected() {
-    return (
-      <p id={"pleaseSelect"} className={"course"}>
-        Please select a badge
-      </p>
-    );
   }
 
   function coursesLoading() {
@@ -48,8 +38,6 @@ function Results(props) {
     <div id="results">
       <h2>Results</h2>
       <div id="courseResultsList">
-        {/* if props.loading is true, put loading <p></p> otherwise generate courses */}
-        {/* todo: make proper loading component, column bubbles with shining thing*/}
         {props.loading ? coursesLoading() : generateCourses()}
       </div>
     </div>
