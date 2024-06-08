@@ -1,4 +1,3 @@
-// import './UpdateDate.css';
 import React, { useState, useEffect } from "react";
 
 function UpdateDate() {
@@ -11,31 +10,22 @@ function UpdateDate() {
           "https://thevanadium.pythonanywhere.com/update-date"
         );
         const data = await response.text();
-        console.log(data);
-        setDate(data);
+        let formattedDate = new Date(data).toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        });
+        setDate(formattedDate);
       } catch (error) {
-        console.error("Error:", error);
+        setDate("Error fetching date");
       }
     }
-
     fetchDate();
   }, []);
 
-  function dateStringToReadableDate(dateString) {
-    const date = new Date(dateString);
-    return date.toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    });
-  }
-
   return (
     <div id="update-date">
-      <p>
-        Last Updated:{" "}
-        {date ? dateStringToReadableDate(date) : <i>Loading...</i>}
-      </p>
+      <p>Last Updated: {date ? date : <i>Loading...</i>}</p>
     </div>
   );
 }

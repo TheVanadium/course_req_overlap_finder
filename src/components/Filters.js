@@ -1,7 +1,6 @@
 import React from "react";
 import ChecklistFilter from "./ChecklistFilter.js";
 import UpdateDate from "./UpdateDate.js";
-import Disclaimer from "./Disclaimer.js";
 import "./Filters.css";
 
 /**
@@ -35,7 +34,15 @@ function Filters(props) {
         }}
       ></ChecklistFilter>
       <UpdateDate></UpdateDate>
-      <Disclaimer></Disclaimer>
+      <div id="disclaimer">
+        <p>
+          <i>
+            Disclaimer: This website is not an official UC Merced product.
+            Always consult your advisor before making course selection-related
+            decisions.
+          </i>
+        </p>
+      </div>
     </div>
   );
 }

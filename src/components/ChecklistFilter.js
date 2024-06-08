@@ -1,11 +1,11 @@
 import React from "react";
 
 function ChecklistFilter(props) {
-  // function that returns checklist item html
   function checklistItem(item) {
-    let urlItem = item.toLowerCase().replace(/ /g, "-");
-    urlItem = urlItem.replace(/the-/g, "");
-    urlItem = urlItem.replace(/of-/g, "");
+    let urlItem = item
+      .toLowerCase()
+      .replace(/ /g, "-")
+      .replace(/the-|of-/g, "");
 
     return (
       <div key={urlItem} id={item}>
@@ -27,7 +27,7 @@ function ChecklistFilter(props) {
   }
 
   return (
-    <div id="filters">
+    <div id="badgelist">
       <p>Badges</p>
       {props.checklistItems &&
         props.checklistItems.map((item) => {
