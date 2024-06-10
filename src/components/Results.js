@@ -25,7 +25,7 @@ function Results(props) {
     return (
       <div id="loadingBoxList">
         {Array.from({ length: 10 }, (_, i) => (
-          <div className={"loadingBox"}>
+          <div className={"loadingBox"} key={i}>
             <div className={"skeletonText"}></div>
             <div className={"skeletonText"}></div>
           </div>
