@@ -58,7 +58,7 @@ function Filters(props) {
             .replace(/ /g, "-")
             .replace(/the-|of-/g, "");
           return (
-            <div key={urlItem} id={item}>
+            <div key={urlItem} id={item+"container"}>
               <input
                 key={urlItem + "input"}
                 type="checkbox"
@@ -92,3 +92,4 @@ function Filters(props) {
   );
 }
 export default Filters;
+export { Filters, badgeList };
